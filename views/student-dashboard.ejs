@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/student-dashboard.css">
+</head>
+<body>
+    <div id="top-nav">
+        <ul>
+            <li><a href="/student-dashboard">Home</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/signout">Sign Out</a></li>
+        </ul>
+    </div>
+    
+    <div id="sidebar">
+        <ul>
+            <li><a href="/colleges">Colleges</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/upcoming-events">Upcoming Events</a></li>
+            <li><a href="/event-history">Event History</a></li>
+        </ul>
+    </div>
+
+    <div id="main-content">
+        <h2>Latest Events</h2>
+        <div id="latest-events">
+            <% if (success) { %>
+                <p>Registration successful!</p>
+            <% } %>
+            <% latestEvents.forEach(event => { %>
+                <div class="event">
+                    <h3><%= event.name %></h3>
+                    <p><%= event.description %></p>
+                    <p><%= new Date(event.date).toLocaleDateString() %></p>
+                    <form action="/api/events/register" method="post">
+                        <input type="hidden" name="eventId" value="<%= event.id %>">
+                        <input type="hidden" name="userId" value="<%= user.id %>">
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            <% }); %>
+        </div>
+
+        <h2>Upcoming Events</h2>
+        <div id="upcoming-events">
+            <% upcomingEvents.forEach(event => { %>
+                <div class="event">
+                    <h3><%= event.name %></h3>
+                    <p><%= event.description %></p>
+                    <p>Date: <%= new Date(event.date).toDateString() %></p>
+                </div>
+            <% }); %>
+        </div>
+
+        <h2>Event History</h2>
+        <div id="event-history">
+            <% historyEvents.forEach(event => { %>
+                <div class="event">
+                    <h3><%= event.name %></h3>
+                    <p><%= event.description %></p>
+                    <p>Date: <%= new Date(event.date).toDateString() %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>

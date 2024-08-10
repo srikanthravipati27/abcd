@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Dashboard</title>
+  <link rel="stylesheet" href="/css/college-dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>College Dashboard</h1>
+    <nav>
+      <a href="/college-dashboard">Home</a>
+      <a href="/contact">Contact</a>
+      <a href="/profile">Profile</a>
+      <a href="/signout">Sign Out</a>
+    </nav>
+  </header>
+  <main>
+    <!-- College Events Section -->
+    <section id="college-events">
+      <h2>College Events</h2>
+      <ul>
+        <% if (collegeEvents && collegeEvents.length > 0) { %>
+          <% collegeEvents.forEach(event => { %>
+            <li>
+              <h3><%= event.name %></h3>
+              <p><%= event.description %></p>
+              <p>Date: <%= new Date(event.date).toLocaleDateString() %></p>
+              <a href="/college-events/<%= event.id %>">View Details</a>
+            </li>
+          <% }) %>
+        <% } else { %>
+          <p>No events available.</p>
+        <% } %>
+      </ul>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <% if (upcomingEvents && upcomingEvents.length > 0) { %>
+          <% upcomingEvents.forEach(event => { %>
+            <li>
+              <h3><%= event.name %></h3>
+              <p><%= event.description %></p>
+              <p>Date: <%= new Date(event.date).toLocaleDateString() %></p>
+              <a href="/college-events/<%= event.id %>">View Details</a>
+            </li>
+          <% }) %>
+        <% } else { %>
+          <p>No upcoming events.</p>
+        <% } %>
+      </ul>
+    </section>
+
+    <!-- Event History Section -->
+    <section id="event-history">
+      <h2>Event History</h2>
+      <ul>
+        <% if (historyEvents && historyEvents.length > 0) { %>
+          <% historyEvents.forEach(event => { %>
+            <li>
+              <h3><%= event.name %></h3>
+              <p><%= event.description %></p>
+              <p>Date: <%= new Date(event.date).toLocaleDateString() %></p>
+              <a href="/college-events/<%= event.id %>">View Details</a>
+            </li>
+          <% }) %>
+        <% } else { %>
+          <p>No past events.</p>
+        <% } %>
+      </ul>
+    </section>
+
+    <!-- Post Event Section -->
+    <section id="post-event">
+      <h2>Post a New Event</h2>
+      <form action="/api/events" method="POST">
+        <label for="name">Event Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        
+        <input type="hidden" name="collegeId" value="<%= user.id %>">
+        
+        <button type="submit">Post Event</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

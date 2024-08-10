@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  width: 200px;
+  background-color: #343a40;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #474f54;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  background-color: #495057;
+}
+
+/* Top Navigation Styles */
+#top-nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #343a40;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+}
+
+#top-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#top-nav ul li {
+  margin-right: 20px;
+}
+
+#top-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#top-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+#main-content {
+  margin-left: 200px;
+  padding: 20px;
+  flex-grow: 1;
+  margin-top: 60px; /* Account for fixed top nav */
+}
+
+#latest-events, #upcoming-events, #event-history {
+  margin-top: 20px;
+}
+
+.event {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.event h3 {
+  margin-top: 0;
+  color: #343a40;
+}
+
+.event p {
+  margin: 5px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('/images/img2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 10px 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.title-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-image h1 {
+  font-size: 3em;
+  margin: 0;
+  flex: 1;
+}
+
+.title-image .image {
+  flex: 1;
+  text-align: right;
+}
+
+.title-image .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.quote, .explore {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.quote p {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.explore h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

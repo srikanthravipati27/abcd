@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+#sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 15px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  background-color: #e4e4e4;
+  border-radius: 4px;
+}
+
+#sidebar ul li a:hover {
+  background-color: #ccc;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+main section {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input, form button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Section Styles */
+#college-events ul, #upcoming-events ul, #event-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+#college-events li, #upcoming-events li, #event-history li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#college-events li h3, #upcoming-events li h3, #event-history li h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+#college-events li p, #upcoming-events li p, #event-history li p {
+  margin: 5px 0;
+}
+
+#college-events a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+#college-events a:hover {
+  text-decoration: underline;
+}

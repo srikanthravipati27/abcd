@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  width: 200px;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 1rem;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+section.content {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.event-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: calc(33.333% - 2rem);
+}
+
+.event-card h2 {
+  margin-top: 0;
+}
+
+.register-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}

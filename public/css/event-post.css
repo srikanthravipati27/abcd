@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  background-color: #343a40;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar Styles */
+aside {
+  width: 200px;
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 60px;
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  padding: 15px;
+  border-bottom: 1px solid #474f54;
+}
+
+aside ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+aside ul li a:hover {
+  background-color: #495057;
+}
+
+/* Main Content Styles */
+main {
+  margin-left: 200px;
+  padding: 20px;
+  flex-grow: 1;
+  margin-top: 70px; /* Account for fixed top nav */
+  width: calc(100% - 220px);
+}
+
+h1 {
+  color: #343a40;
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+li h2 {
+  margin-top: 0;
+  color: #343a40;
+}
+
+li p {
+  margin: 5px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

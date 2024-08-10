@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Events</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact Us</a>
+      <a href="/profile">Profile</a>
+      <a href="/signout">Sign Out</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>College Events</h1>
+    <ul>
+      <% events.forEach(event => { %>
+        <li>
+          <h2><%= event.title %></h2>
+          <p><%= event.description %></p>
+          <p>Date: <%= new Date(event.date).toLocaleDateString() %></p>
+          <form action="/api/events/register" method="POST">
+            <input type="hidden" name="eventId" value="<%= event.id %>">
+            <input type="hidden" name="userId" value="<%= req.user.id %>">
+            <button type="submit">Register</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>

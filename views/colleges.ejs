@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colleges</title>
+  <link rel="stylesheet" href="/css/event-post.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact Us</a>
+      <a href="/profile">Profile</a>
+      <a href="/signout">Sign Out</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Colleges</h1>
+    <ul>
+      <% colleges.forEach(college => { %>
+        <li>
+          <h2><%= college.collegeName %></h2>
+          <a href="/colleges/<%= college.id %>">View Events</a>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>

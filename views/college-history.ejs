@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Event History</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Event History</h1>
+  </header>
+  <main>
+    <section id="event-history">
+      <h2>Past Events</h2>
+      <ul>
+        <% historyEvents.forEach(event => { %>
+          <li>
+            <h3><%= event.name %></h3>
+            <p><%= event.description %></p>
+            <p>Date: <%= event.date.toLocaleDateString() %></p>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    background-color: #e0f7fa; /* Light cyan */
+  }
+  
+  .container {
+    background-color: #ffffff;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00796b; /* Dark cyan */
+  }
+  
